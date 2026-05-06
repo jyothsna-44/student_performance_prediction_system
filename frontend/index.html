@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobReady AI | Corporate Analytics</title>
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<div class="app-shell">
+    <!-- Sidebar Navigation Decor -->
+    <nav class="side-nav">
+        <div class="nav-logo"><i class="fas fa-brain-circuit"></i></div>
+        <div class="nav-links">
+            <div class="active"><i class="fas fa-chart-pie"></i></div>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <h1>Talent <span>Orbit</span></h1>
+                <p>Neural Network Analysis • Placement Predictor</p>
+            </div>
+            <div class="header-right">
+                <div class="ai-status">
+                    <span class="pulse"></span>
+                    AI ENGINE: OPTIMIZED
+                </div>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Left: Input Panel -->
+            <aside class="panel glass-card">
+                <div class="panel-header">
+                    <h3><i class="fas fa-sliders"></i> Candidate Metrics</h3>
+                    <span>Benchmarks applied</span>
+                </div>
+                
+                <div class="input-stack">
+                    <div class="input-group">
+                        <label>Study Commitment (Hours)</label>
+                        <input type="number" id="study" placeholder="Target 8+">
+                    </div>
+                    <div class="input-group">
+                        <label>Professionalism (Attend %)</label>
+                        <input type="number" id="attendance" placeholder="Target 60+">
+                    </div>
+                    <div class="input-group">
+                        <label>Industry Score (Past Exam)</label>
+                        <input type="number" id="past" placeholder="Target 60+">
+                    </div>
+                    <div class="input-group">
+                        <label>Task Reliability (Tasks)</label>
+                        <input type="number" id="assign" placeholder="Target 15+">
+                    </div>
+                    <div class="input-group">
+                        <label>Skill Competency (Marks)</label>
+                        <input type="number" id="marks" placeholder="Target 60+">
+                    </div>
+                </div>
+
+                <button onclick="runAnalysis()" class="primary-btn">
+                    <span>GENERATE ANALYSIS</span>
+                    <i class="fas fa-bolt"></i>
+                </button>
+            </aside>
+
+            <!-- Center/Right: Results Workspace -->
+            <div class="workspace">
+                <!-- Result Banner -->
+                <div id="result-banner" class="glass-card banner hidden">
+                    <div class="banner-content">
+                        <div id="badge-icon"></div>
+                        <div class="banner-text">
+                            <h2 id="result-label"></h2>
+                            <p id="insight-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Row -->
+                <div class="visual-row">
+                    <div class="glass-card chart-container">
+                        <h4><i class="fas fa-bullseye"></i> Proficiency Map</h4>
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                    <div class="glass-card chart-container">
+                        <h4><i class="fas fa-chart-bar"></i> Industry Benchmarking</h4>
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Footer Stats -->
+                <div class="footer-row">
+                    <div class="glass-card info-panel">
+                        <h4><i class="fas fa-fingerprint"></i> Similar Profiles (Score Match) </h4>
+                        <div id="similar-id-list" class="tag-cloud">Waiting for analysis...</div>
+                    </div>
+                    <div class="glass-card info-panel">
+                        <h4><i class="fas fa-triangle-exclamation"></i> Identified At-Risk Students</h4>
+                        <div id="risk-list" class="risk-scroller">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

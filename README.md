@@ -149,9 +149,13 @@ Open `frontend/index.html` in browser.
 # Screenshots
 # output 1
 <img width="1771" height="897" alt="Screenshot 2026-04-29 142034" src="https://github.com/user-attachments/assets/9e1a1ba9-1fe2-40b5-a62f-b2e62e6942de" />
+
 # output 2
-<img width="1563" height="889" alt="Screenshot 2026-04-29 142114" src="https://github.com/user-attachments/assets/cb69afd1-4b5d-45a4-af33-a8a02e17ac22" />
+
+<img width="1523" height="898" alt="Screenshot 2026-04-29 142145" src="https://github.com/user-attachments/assets/587f0ba5-df37-42b5-962e-a635cb02be24" />
+
 # output 3
+
 <img width="1547" height="901" alt="Screenshot 2026-04-29 142108" src="https://github.com/user-attachments/assets/00c68f27-e213-4072-ac29-ed5debb4555a" />
 
 
